@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_17_171953) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_17_172902) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "brand"
@@ -18,6 +18,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_17_171953) do
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "location_id"
+    t.index ["location_id"], name: "index_items_on_location_id"
   end
 
   create_table "locations", force: :cascade do |t|
