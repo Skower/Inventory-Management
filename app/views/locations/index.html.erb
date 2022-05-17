@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="locations">
+  <table class="table">
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Manager</th>
+        <th></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.name %></td>
+        <td><%= location.address %></td>
+        <td><%= location.manager %></td>
+        <td><%= link_to "Show", location , class:"btn btn-secondary"%><td>
+      </tr>
+      <% end %>
+    </tbody>
+  
+  </table>
+  
+</div>
+
+<%= link_to "New Location", new_location_path, class:"btn btn-primary" %>

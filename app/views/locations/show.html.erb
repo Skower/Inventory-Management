@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @location %>
+
+<div class="container">
+  <%= link_to "Edit this location", edit_location_path(@location), class:"btn btn-primary" %>
+  <%= link_to "Back to locations", locations_path, class:"btn btn-primary" %>
+</div>
+
+<div class="container">
+  <br/>
+  <%= button_to "Destroy this location", @location, method: :delete, class:"btn btn-danger" %>
+</div>
