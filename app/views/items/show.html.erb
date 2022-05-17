@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @item %>
+
+
+<div class="container">
+  <%= link_to "Edit this item", edit_item_path(@item), class:"btn btn-primary" %>
+  <%= link_to "Back to items", items_path, class:"btn btn-primary"%>
+  
+</div>
+
+<div class="container">
+  <br/>
+  <%= button_to "Destroy this item", @item, method: :delete, class:"btn btn-danger" %>  
+</div>
