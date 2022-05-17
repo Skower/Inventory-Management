@@ -5,6 +5,7 @@
 
     <thead>
       <tr>
+        <th>ID</th>
         <th>Name</th>
         <th>Address</th>
         <th>Manager</th>
@@ -15,6 +16,7 @@
     <tbody>
       <% @locations.each do |location| %>
       <tr>
+        <td><%= location.id %></td>
         <td><%= location.name %></td>
         <td><%= location.address %></td>
         <td><%= location.manager %></td>
